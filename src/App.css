@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Poppins:wght@400;700&display=swap');
+
+
+body{
+  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(234, 240, 240);
+}
+
+.navbar-a{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 7vh;
+  background-color: rgb(66, 34, 136);
+  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(240, 242, 248);
+  padding-top: 11px;
+  position: sticky;
+  top: 0;
+}
+
+.leftNav-a{
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightNav-a, .rightNav-a li, .rightNav-a li a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  color: rgb(240, 242, 248);
+}
+
+
+.rightNav-a li a:hover{
+  color: rgb(208, 213, 231);
+}
+
+.leftNav-a li a{
+  text-decoration: none;
+  color: rgb(240, 242, 248);
+}
+
+.serviceItem{
+  min-height: 20vh;
+  max-width: 70vw;
+  min-width: 60vw;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(245, 245, 249);
+  box-shadow: 5px 5px 5px rgb(223, 216, 216);
+  margin: 10px;
+}
+
+
+.servicebody{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+  height: 7vh;
+}
+
+#servicebodyheader{
+  font-weight: 600;
+  font-size: large;
+}
+
+button{
+  height: 35px;
+  background-color: rgb(84, 53, 151);
+  color: rgb(240, 242, 248);
+  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+}
+button:hover{
+  color: rgb(208, 213, 231);
+  size: 5%;
+  transform: scale(1.05);
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+
+.servicemaindiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.carousel-main-div{
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.carousel-div{
+  height: 50vh;
+  width: 75vh;
+
+}
+
+.c-item{
+  height: 100%;
+  width: 100%;
+
+}
+
+.c-img{
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  margin-top: 400%;
+}
+
+#carouselExample{
+  box-shadow: 5px 5px 5px rgb(223, 216, 216);
+
+}
