@@ -1,11 +1,13 @@
 import React from "react";
 import garage from '../Assets/garage.png';
+import HomepageInformation from "./HomepageInformation";
 
 export default function Hompage() {
   return (
+    <>
       <div className="carousel-main-div">
         <div>
-          <h1 className="mx-2">Go-Mechanic</h1>
+          <h1 className="mx-2" style={{color:"rgb(66, 34, 136)"}}>Go-Mechanic</h1>
           <h3 className="mx-2">Your trusted car care partner</h3>
           <p className="mx-2">
             Stay on top of your car's health with our routine maintenance
@@ -21,10 +23,11 @@ export default function Hompage() {
           </button>
         </div>
 
-        <div>
+        <div className="homepageimagediv">
             <img src={garage} alt="garage image" height={"300vh"}/>
         </div>
       </div>
-  
+      <HomepageInformation/>
+    </>
   );
 }
