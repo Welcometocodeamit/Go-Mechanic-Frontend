@@ -1,6 +1,8 @@
 import React from "react";
 import garage from '../Assets/garage.png';
 import HomepageInformation from "./HomepageInformation";
+import { Link } from "react-router-dom";
+import Login from "./Login";
 
 export default function Hompage() {
   return (
@@ -15,12 +17,12 @@ export default function Hompage() {
             Oil changes, tire rotations, and inspections – we'll keep your car
             running like new.
           </p>
-          <button type="button" className="mx-2">
+          <Link to='/login'><button type="button" className="mx-2">
             Log-in
-          </button>
-          <button type="button" className="mx-2">
+          </button></Link>
+          <Link to='/register'><button type="button" className="mx-2">
             Register
-          </button>
+          </button></Link>
         </div>
 
         <div className="homepageimagediv">

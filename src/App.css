@@ -158,9 +158,78 @@ button:hover{
   justify-content: center;
   align-items: center;
   border-radius: 10px;
- font-size: larger;
- font-style: italic;
- font-family: cursive;
- color: rgb(2, 26, 17);
- box-shadow: 5px 5px 5px rgb(223, 216, 216);
+  font-size: larger;
+  font-style: italic;
+  font-family: cursive;
+  color: rgb(2, 26, 17);
+  box-shadow: 5px 5px 5px rgb(223, 216, 216);
+}
+
+#loginpagemaindiv{
+  height: 93vh;
+  width:100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logindiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 60vh;
+  min-width:25vw;
+  border: 3px solid rgb(27, 7, 117);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgb(161, 166, 223);
+  background-color: rgb(245, 245, 249);
+}
+
+#logindiv form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  min-height: 30vh;
+}
+
+.input{
+  /* margin-top: 10%; */
+  margin-bottom:  10%;
+  min-width: 15vw;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  text-align: center;
+}
+::-webkit-input-placeholder {
+  text-align: center;
+}
+:-moz-placeholder {
+  text-align: center;
+}
+
+#loginsubmit{
+  margin-top: 10%;
+  margin-bottom:  10%;
+  height: 40px;
+  border-radius: 5px;
+  width: 90px;
+  margin: auto;
+  background-color: rgb(84, 53, 151);
+  color: rgb(240, 242, 248);
+}
+
+#loginsubmit:hover{
+  color: rgb(208, 213, 231);
+  size: 5%;
+  transform: scale(1.05);
+  transition-duration: 300ms;
+  cursor: pointer;
 }

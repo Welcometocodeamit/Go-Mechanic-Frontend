@@ -13,7 +13,8 @@ export default function Navbar() {
       <div className='rightNav-a'>
         <li>
             <Link to='/services'><ul>Services</ul></Link>
-            <a href='/a'><ul>About us</ul></a>
+            <Link to='/aboutus'><ul>About us</ul></Link>
+            <Link to='/login'><ul>Log in</ul></Link>
         </li>
 
       </div>
