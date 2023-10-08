@@ -2,6 +2,7 @@ import React from "react";
 import garage from '../Assets/garage.png';
 import HomepageInformation from "./HomepageInformation";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 export default function Hompage() {
   return (
@@ -29,6 +30,7 @@ export default function Hompage() {
         </div>
       </div>
       <HomepageInformation/>
+      <Footer/>
     </>
   );
 }

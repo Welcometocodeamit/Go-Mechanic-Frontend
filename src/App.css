@@ -236,7 +236,7 @@ input {
 
 #works{
   width: 60vw;
-  height: 14vh;
+  min-height: 14vh;
   border: 1px solid blueviolet;
   background-color: rgb(99, 63, 183);
   border-radius: 5px;
@@ -266,4 +266,52 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#footer{
+  margin-top: 40px;
+  margin-bottom: 5px;
+  min-height:35vh;
+  width: 100vw;
+  display: flex;
+  background-color: rgb(224, 226, 240);
+  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#leftfooter{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#footerheader{
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+
+#footerheader h3{
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+
+#footersocial img{
+  margin: 5px;
+}
+
+#rightfooter{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#rightfooter div{
+  display: flex;
+  align-items: center;
+}
+
+#rightfooter div img, #rightfooter div h3{
+  margin-right: 20px;
 }

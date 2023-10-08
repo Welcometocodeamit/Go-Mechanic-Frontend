@@ -12,6 +12,8 @@ export default class Services extends Component {
             }
         }
 
+        
+
         async componentDidMount(){
             let url = "http://localhost:8080/api/services"
             let data = await fetch(url).catch((err)=>{console.log(err)})
