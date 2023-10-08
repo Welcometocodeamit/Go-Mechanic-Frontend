@@ -1,4 +1,10 @@
 import React from 'react'
+import Works from './Works'
+import fimg from '../Assets/checklist.png';
+import simg from '../Assets/car-repair.png';
+import timg from '../Assets/schedule.png';
+import foimg from '../Assets/one-time-password.png';
+import fiimg from '../Assets/waiting-room.png';
 
 export default function HomepageInformation() {
   return (<>
@@ -6,15 +12,12 @@ export default function HomepageInformation() {
           <div className='information-text'>
                   <center><h1>How Go-Mechanic Works?</h1></center>
           </div>
-          <div className='information-main'>
-                  <div className='information'>
-                      <div className='inner-information mx-2 my-2'><big><b>1. Select a service</b></big><br/><p className='mx-3'>From Auto-care-hub<br/>website</p></div>
-                      <div className='inner-information mx-2 my-2'><big><b>2. Select a Garage</b></big><br/><p className='mx-3'>Choose a garage<br/> near to you</p></div>
-                      <div className='inner-information mx-2 my-2'><big><b>3. Schendule pickup</b></big><br/><p className='mx-3'>We offer free pickup<br/> and delivery</p></div>
-                      <div className='inner-information mx-2 my-2'><big><b>4. Verify your pickup</b></big><br/><p className='mx-3'>Quickly verify <br/>with OTP</p></div>
-                      <div className='inner-information mx-2 my-2'><big><b>5. Give us time!</b></big><br/><p className='mx-3'>We will take care<br/> from here</p></div>
-                  </div>
-          </div>
+
+          <Works heading="1. Select a service" info="From Go Mechanic website" imgsrc={fimg}/>
+          <Works heading="2. Select a Garage" info="Choose a garage near to you" imgsrc={simg}/>
+          <Works heading="3. Schedule pickup" info="We offer free pickup and delivery" imgsrc={timg}/>
+          <Works heading="4. Verify your pickup" info="Quickly verify with otp" imgsrc={foimg}/>
+          <Works heading="5. Give us time!" info="We will take care from here" imgsrc={fiimg}/>
         </div>
     </>
   )

@@ -2,7 +2,6 @@ import React from "react";
 import garage from '../Assets/garage.png';
 import HomepageInformation from "./HomepageInformation";
 import { Link } from "react-router-dom";
-import Login from "./Login";
 
 export default function Hompage() {
   return (
@@ -26,7 +25,7 @@ export default function Hompage() {
         </div>
 
         <div className="homepageimagediv">
-            <img src={garage} alt="garage image" height={"300vh"}/>
+            <img src={garage} alt="garage image" height={"200vh"}/>
         </div>
       </div>
       <HomepageInformation/>

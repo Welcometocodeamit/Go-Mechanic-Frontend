@@ -14,11 +14,10 @@ export default class Services extends Component {
 
         async componentDidMount(){
             let url = "http://localhost:8080/api/services"
-            let data = await fetch(url)
+            let data = await fetch(url).catch((err)=>{console.log(err)})
             let parsedData= await data.json()
             console.log(parsedData)
             this.setState({data:parsedData.data})
-
         }
     
   render() {
