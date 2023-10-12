@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import ServiceItem from './ServiceItem'
 
 
@@ -24,6 +25,7 @@ export default class Services extends Component {
     
   render() {
     return (
+        <>
         <div className='servicemaindiv'>
            {this.state.data?.map((element)=>{
             return <ServiceItem key={element.id} orgname={element.organizationName} city={element.city} 
@@ -31,6 +33,7 @@ export default class Services extends Component {
              })}
            
         </div>
+        </>
     )
   }
 }

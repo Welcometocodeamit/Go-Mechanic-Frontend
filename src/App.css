@@ -50,9 +50,8 @@ body{
 }
 
 .serviceItem{
-  min-height: 20vh;
-  max-width: 70vw;
-  min-width: 60vw;
+  height: 250px;
+  width: 300px;
   border: 1px solid black;
   border-radius: 5px;
   background-color: rgb(245, 245, 249);
@@ -61,21 +60,37 @@ body{
 }
 
 
+
 .servicebody{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 10px;
-  height: 7vh;
+  padding: 0 20px;
+  height: 80px;
+
 }
 
+.servicebody1{
+  background-color: rgb(202, 202, 227);
+  border-radius:5px 5px 0px 0px;
+}
 #servicebodyheader{
   font-weight: 600;
   font-size: large;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#servicecity{
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
 }
 
 button{
   height: 35px;
+  width: 80px;
+  font-size: small;
   background-color: rgb(84, 53, 151);
   color: rgb(240, 242, 248);
   font-family: 'Fredericka the Great', cursive;
@@ -92,9 +107,9 @@ button:hover{
 
 .servicemaindiv{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  flex-direction: row;
   margin-top: 10px;
 }
 
@@ -326,6 +341,12 @@ input {
   align-items: center;
   width: 250px;
   height: 150px;
+ 
+}
+
+#CService:hover{
+  transform: scale(1.03);
+  transition: 300ms;
 }
 
 #sdiv{
@@ -343,4 +364,10 @@ input {
 
 #cmaindiv h1{
  color: rgb(66, 34, 136);
+}
+
+#addgarage{
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
 }

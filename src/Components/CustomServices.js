@@ -20,7 +20,7 @@ import tyre from '../Assets/tyre.png'
 export default function CustomServices() {
   return (
     <div id='cmaindiv'>
-         <center><h1>Custom Services</h1></center>
+         <center><h1>Car Services</h1></center>
         <div id='sdiv'>
         <CService heading="Batteries" imgs={carbattery}/>
         <CService heading="Breaks" imgs={breaks}/>

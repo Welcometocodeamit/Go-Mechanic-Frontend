@@ -30,8 +30,8 @@ export default function Hompage() {
             <img src={garage} alt="garage image" height={"200vh"}/>
         </div>
       </div>
-      <HomepageInformation/>
       <CustomServices/>
+      <HomepageInformation/>
       <Footer/>
     </>
   );

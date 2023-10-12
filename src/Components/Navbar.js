@@ -12,7 +12,7 @@ export default function Navbar() {
 
       <div className='rightNav-a'>
         <li>
-            <Link to='/services'><ul>Services</ul></Link>
+            <Link to='/services'><ul>Garages</ul></Link>
             <Link to='/aboutus'><ul>About us</ul></Link>
             <Link to='/login'><ul>Log in</ul></Link>
         </li>
