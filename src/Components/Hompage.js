@@ -4,6 +4,7 @@ import HomepageInformation from "./HomepageInformation";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import CustomServices from "./CustomServices";
+import loadergear from '../Assets/Gear.gif'
 
 export default function Hompage() {
   return (
@@ -30,7 +31,7 @@ export default function Hompage() {
             <img src={garage} alt="garage image" height={"200vh"}/>
         </div>
       </div>
-      <CustomServices/>
+       <CustomServices/>
       <HomepageInformation/>
       <Footer/>
     </>
