@@ -8,8 +8,9 @@ export default class Services extends Component {
         constructor(){
             super();
             this.state={
-                data:this.arr,
-                loading:false
+                data:[],
+                loading:false,
+                city:'Near You'
             }
         }
         
@@ -32,7 +33,9 @@ export default class Services extends Component {
             let parsedData= await data.json()
             console.log(parsedData)
             this.setState({data:parsedData.data,
-            loading:false})
+            loading:false,
+            city:"in "+ city[0].toUpperCase()+city.slice(1)
+        })
         }
     
   render() {
@@ -42,7 +45,7 @@ export default class Services extends Component {
 
             <div></div>
                 <div>
-                <center><h4 style={{fontWeight:'bold', margin:'10px', color:'rgb(66, 34, 136)'}}>Garages Near You</h4></center>
+                <center><h4 style={{fontWeight:'bold', margin:'10px', color:'rgb(66, 34, 136)'}}>Garages {this.state.city}</h4></center>
                 </div>    
 
                 <div id='ghi'>

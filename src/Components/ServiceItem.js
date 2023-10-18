@@ -16,7 +16,7 @@ export default function ServiceItem(props) {
 
           <div className='servicebody'>
             <p>Starting from {props.price}</p>    
-            <a href='/a'><button>Book Now</button></a>
+            <a href='/bookingform'><button>Book Now</button></a>
             </div>
         </div>
 

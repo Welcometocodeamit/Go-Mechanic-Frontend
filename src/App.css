@@ -403,3 +403,15 @@ input {
   margin-right: 20px;
   background-color: rgb(234, 240, 240);
 }
+
+#submitformbtn{
+  height: 35px;
+  width: 80px;
+  font-size: small;
+  background-color: rgb(84, 53, 151);
+  color: rgb(240, 242, 248);
+  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+
+}

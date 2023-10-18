@@ -1,4 +1,5 @@
 import './App.css';
+import BookingForm from './Components/BookingForm';
 import Hompage from './Components/Hompage';
 import Login from './Components/Login';
 import Navbar from './Components/Navbar';
@@ -17,6 +18,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Registration/>}/>
         <Route path='/addgarage' element={<Registration/>}/>
+        <Route path='/bookingform' element={<BookingForm/>}/>
       </Routes>
    </BrowserRouter>
    </>
