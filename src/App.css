@@ -415,3 +415,70 @@ input {
   border-radius: 5px;
 
 }
+
+
+#vehicleheading{
+  /* margin-top: 25px; */
+  position: sticky;
+  top: 50px;
+  background-color: aliceblue;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#vehicleheading center h4{
+  color: rgb(66, 34, 136);;
+  font-weight: 600;
+}
+
+#vehiclecard{
+  height: 200px;
+  width: 600px;
+  border: 1.5px solid rgb(24, 51, 148);
+  background-color: #fff;
+  margin-left: 80px;
+  margin-top: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#vehicleimg{
+  height: 200px;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+
+#vehicleinfo{
+  height: 200px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#vehicleinfo div{
+  display: flex;
+  align-items: center;
+}
+
+#vehicleinfo div h5{
+  margin-top: auto;
+}
+#vehicleinfo div img{
+  margin-right: 20px;
+}
+
+#addvehicle{
+  border-radius: 5px;
+  background-color: #fff;
+  position: sticky;
+  top: 140px;
+  height: 400px;
+  width: 300px;
+}
