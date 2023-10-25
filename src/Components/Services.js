@@ -16,7 +16,7 @@ export default class Services extends Component {
         
 
         async componentDidMount(){
-            let url = "http://localhost:8080/api/services"
+            let url = "http://ec2-51-20-117-115.eu-north-1.compute.amazonaws.com:8080/api/services"
             this.setState({loading:true})
             let data = await fetch(url).catch((err)=>{console.log(err)})
             let parsedData= await data.json()
@@ -27,7 +27,7 @@ export default class Services extends Component {
 
         searchByCity=async ()=>{
             let city = document.getElementById('inputCity').value
-            let url = `http://localhost:8080/api/services/${city}`
+            let url = `http://ec2-51-20-117-115.eu-north-1.compute.amazonaws.com:8080/api/services/${city}`
             this.setState({loading:true})
             let data = await fetch(url).catch((err)=>{console.log(err)})
             let parsedData= await data.json()
