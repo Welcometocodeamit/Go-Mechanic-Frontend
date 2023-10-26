@@ -5,7 +5,6 @@ export default function AddVehicle() {
         let vehicleName = document.getElementById('vehiclename').value
         let plateNo = document.getElementById('plateno').value
         let chassis = document.getElementById('chassis').value
-        console.log(vehicleName+plateNo+chassis)
 
         let data = { 
             carName: vehicleName,
@@ -20,11 +19,9 @@ export default function AddVehicle() {
             body: JSON.stringify(data)
         };
 
-        let url = "http://localhost:8080/api/cars"
+        let url = "http://ec2-51-20-117-115.eu-north-1.compute.amazonaws.com:8080/api/cars"
 
-        fetch(url, requestOptions).then(res=>{console.log(res)}).catch(e=>{console.log(e)})
-        console.log("done")
-        
+        fetch(url, requestOptions).catch((e)=>{console.log("Unable to fetch")})
     }
   return (
     <div id='addvehicle'>

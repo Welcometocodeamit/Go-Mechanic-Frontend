@@ -11,10 +11,9 @@ export default class Vehicles extends Component{
 }
 
 async componentDidMount(){
-  let url = "http://localhost:8080/api/cars"
+  let url = "http://ec2-51-20-117-115.eu-north-1.compute.amazonaws.com:8080/api/cars"
   let data = await fetch(url).catch((err)=>{console.log(err)})
   let parsedData= await data.json()
-  console.log(parsedData)
   this.setState({data:parsedData.data})
 }
   

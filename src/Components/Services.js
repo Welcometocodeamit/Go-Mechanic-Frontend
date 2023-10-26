@@ -20,7 +20,6 @@ export default class Services extends Component {
             this.setState({loading:true})
             let data = await fetch(url).catch((err)=>{console.log(err)})
             let parsedData= await data.json()
-            console.log(parsedData)
             this.setState({data:parsedData.data,
             loading:false})
         }
@@ -31,7 +30,6 @@ export default class Services extends Component {
             this.setState({loading:true})
             let data = await fetch(url).catch((err)=>{console.log(err)})
             let parsedData= await data.json()
-            console.log(parsedData)
             this.setState({data:parsedData.data,
             loading:false,
             city:"in "+ city[0].toUpperCase()+city.slice(1)
