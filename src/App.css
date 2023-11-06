@@ -482,3 +482,54 @@ input {
   height: 400px;
   width: 300px;
 }
+
+
+/* Default styles for screens wider than 768px */
+.navbar-a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: #333; */
+  padding: 10px 20px;
+  color: white;
+}
+
+.leftNav-a ul {
+  list-style: none;
+  margin: 0;
+}
+
+.leftNav-a ul li {
+  margin: 0;
+}
+
+/* Hamburger menu styles for screens 768px or less */
+@media (max-width: 600px) {
+  .navbar-a .rightNav-a {
+    display: none;
+  }
+
+  .navbar-a .mobile-menu-open .rightNav-a {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgb(66, 34, 136);
+    padding: 10px;
+    z-index: 100;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+  }
+}
