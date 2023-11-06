@@ -19,9 +19,10 @@ export default function AddVehicle() {
             body: JSON.stringify(data)
         };
 
-        let url = "http://ec2-51-20-117-115.eu-north-1.compute.amazonaws.com:8080/api/cars"
+        let url = "https://go-mechanic-backend-production.up.railway.app/api/cars"
 
-        fetch(url, requestOptions).catch((e)=>{console.log("Unable to fetch")})
+        try{fetch(url, requestOptions).catch((e)=>{console.log("Unable to fetch")})}catch (err) {
+            console.error(err);}
     }
   return (
     <div id='addvehicle'>

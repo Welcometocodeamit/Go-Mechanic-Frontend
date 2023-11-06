@@ -16,17 +16,22 @@ export default class Services extends Component {
         
 
         async componentDidMount(){
-            let url = "http://ec2-51-20-117-115.eu-north-1.compute.amazonaws.com:8080/api/services"
+            try{
+            let url = "https://go-mechanic-backend-production.up.railway.app/api/services"
             this.setState({loading:true})
             let data = await fetch(url).catch((err)=>{console.log(err)})
             let parsedData= await data.json()
             this.setState({data:parsedData.data,
             loading:false})
+            }catch (err){
+                console.log(err)    
+            }
         }
 
         searchByCity=async ()=>{
+            try{
             let city = document.getElementById('inputCity').value
-            let url = `http://ec2-51-20-117-115.eu-north-1.compute.amazonaws.com:8080/api/services/${city}`
+            let url = `https://go-mechanic-backend-production.up.railway.app/api/services/${city}`
             this.setState({loading:true})
             let data = await fetch(url).catch((err)=>{console.log(err)})
             let parsedData= await data.json()
@@ -34,6 +39,9 @@ export default class Services extends Component {
             loading:false,
             city:"in "+ city[0].toUpperCase()+city.slice(1)
         })
+        }catch(err){
+            console.log(err)
+        }   
         }
     
   render() {
