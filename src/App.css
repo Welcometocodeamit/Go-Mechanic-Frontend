@@ -41,6 +41,25 @@ body{
   margin: auto;
 }
 
+#aboutusmain{
+  margin: 40px 40px;
+}
+
+
+#footerme h6 img{
+  height: 15px;
+}
+
+#footerme{
+  text-align: center;
+  color: rgb(84, 53, 151);
+}
+#aboutusmain h4{
+  color: rgb(84, 53, 151);
+
+}
+
+
 
 .rightNav-a ul a:hover{
   color: rgb(208, 213, 231);
