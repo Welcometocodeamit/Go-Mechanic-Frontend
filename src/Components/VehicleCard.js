@@ -5,6 +5,28 @@ import plate from '../Assets/license-plate.png'
 import lastservice from '../Assets/last-minute.png'
 
 export default function VehicleCard(props) {
+
+  function deleteVehicle(){
+    let carId= props.carId
+
+      let url = `https://go-mechanic-backend-production.up.railway.app/api/cars/deletecar/${carId}`
+
+      fetch(url, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json', 
+        },
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Failed to delete vehicle. Status: ${response.status}`);
+          }
+          window.location.reload()
+        })
+        .catch(error => {
+          console.error('Error deleting vehicle:', error);
+        });
+  }
   return (
         <div id='vehiclecard'>
 
@@ -15,7 +37,7 @@ export default function VehicleCard(props) {
           <div id='vehicleinfo'>
             <div>
                 <img src={carmodel} alt='' height={'40px'}/>
-                <h5>{props.carName}</h5>
+                <h5 id='carName'>{props.carName}</h5>
             </div>
 
             <div>
@@ -27,9 +49,10 @@ export default function VehicleCard(props) {
                 <img src={lastservice} alt='' height={'40px'}/>
                 <h6>Your last service date was <b>20 march 2020</b></h6>
             </div>
-            
-            
-            
+
+            <div>
+              <button onClick={deleteVehicle}>Delete</button>
+            </div>
 
           </div>
 

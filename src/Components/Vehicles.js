@@ -34,7 +34,7 @@ async componentDidMount(){
           <div style={{display:'flex', flexDirection:'column'}}>
           {this.state.data?.map((element)=>{
             return <VehicleCard key={element.id} carName={element.carName}
-            carPlate={element.carPlate}/>
+            carPlate={element.carPlate} carId={element.id}/>
              })}
           </div>
 

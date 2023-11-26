@@ -13,11 +13,11 @@ export default function Navbar() {
   return (
     <div className="navbar-a">
       <div className="leftNav-a">
-        <li>
+        <ul>
           <Link to="/">
-            <ul>Go-Mechanic</ul>
+            <li>Go-Mechanic</li>
           </Link>
-        </li>
+        </ul>
       </div>
       {/* Hamburger menu */}
       <div className={`navbar ${mobileMenuVisible ? 'mobile-menu-open' : ''}`}>
@@ -28,20 +28,20 @@ export default function Navbar() {
         </div>
 
         <div className="rightNav-a">
-          <li>
+          <ul>
             <Link to="/services">
-              <ul>Garages</ul>
+              <li>Garages</li>
             </Link>
             <Link to="/vehicles">
-              <ul>Vehicles</ul>
+              <li>Vehicles</li>
             </Link>
             <Link to="/aboutus">
-              <ul>About us</ul>
+              <li>About us</li>
             </Link>
             <Link to="/login">
-              <ul>Log in</ul>
+              <li>Log in</li>
             </Link>
-          </li>
+          </ul>
         </div>
       </div>
     </div>

@@ -30,21 +30,23 @@ body{
   align-items: center;
 }
 
-.rightNav-a, .rightNav-a li, .rightNav-a li a{
+.rightNav-a, .rightNav-a ul, .rightNav-a ul a{
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
   text-decoration: none;
   color: rgb(240, 242, 248);
+  gap: 30px;
+  margin: auto;
 }
 
 
-.rightNav-a li a:hover{
+.rightNav-a ul a:hover{
   color: rgb(208, 213, 231);
 }
 
-.leftNav-a li a{
+.leftNav-a ul a{
   text-decoration: none;
   color: rgb(240, 242, 248);
 }

@@ -21,7 +21,12 @@ export default function AddVehicle() {
 
         let url = "https://go-mechanic-backend-production.up.railway.app/api/cars"
 
-        try{fetch(url, requestOptions).catch((e)=>{console.log("Unable to fetch")})}catch (err) {
+        try{fetch(url, requestOptions).then(response=>{
+            if (!response.ok) {
+                throw new Error(`Failed to add vehicle. Status: ${response.status}`);
+              }
+              window.location.reload()
+        }).catch((e)=>{console.log("Unable to fetch")})}catch (err) {
             console.error(err);}
     }
   return (
