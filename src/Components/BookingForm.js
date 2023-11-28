@@ -1,6 +1,80 @@
 import React from 'react'
 
 export default function BookingForm() {
+
+    
+
+    function sendMail(){
+        let name=document.getElementById('inputfname').value +" "+document.getElementById('inputlname').value
+        let email=document.getElementById('exampleFormControlInput1').value
+        let plateNo=document.getElementById('inputvehicleno').value
+        let car=document.getElementById('inputvehiclemodel').value
+        let address=document.getElementById('inputAddress2').value +" ,"+document.getElementById('inputCity').value+" ,"+document.getElementById('inputCity').value+" Pincode:"+document.getElementById('inputZip').value
+        console.log(name)
+        console.log(email)
+        console.log(plateNo)
+        console.log(car)
+        console.log(address)
+        let url = `http://localhost:8080/mail/send/${email}`
+
+        let data = { 
+            subject: "Go Mechanic - Booking Recipt",
+            message: `Dear ${name},
+
+            Thank you for choosing Go Mechanic for your vehicle service needs. We are pleased to confirm your booking with the following details:
+            
+            Booking Reference Number: XYZ
+            
+            Vehicle Number: ${plateNo}
+            Vehicle Name/Model: ${car}
+            Service Details: Body parts
+
+            Pickup Details:
+            
+            Pickup Address: ${address}
+            Preferred Pickup Time: 12Pm
+            Estimated Total Cost: 5000rs
+            
+            Payment Details:
+            
+            Payment Method: [Credit Card/PayPal/Cash on Pickup, etc.]
+            Payment Status: [Paid/Unpaid]
+            
+            Important Notes:
+            Please ensure that your vehicle is accessible at the provided pickup address at the scheduled time.
+            In case of any changes or cancellations, please contact our customer service at kumbharamit98@gmail.com.
+
+            Confirmation of Service:
+            A service representative from Go Mechanic will arrive at the specified pickup address. Please be prepared to hand over the vehicle keys and any relevant documents.
+            
+            Thank you for choosing Go Mechanic. We look forward to providing you with excellent service.
+            
+            Best Regards,
+            
+            Go Mechanic
+            +91 8879899584`
+        }
+
+        let requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin':'*' },
+            body: JSON.stringify(data)
+        };
+
+        try{fetch(url, requestOptions).then(response=>{
+            if (!response.ok) {
+                throw new Error(`Failed to send mail. Status: ${response.status}`);
+              }
+                console.log("mail sent")
+                alert(`Booking sucess!, Please check your email for booking details`)
+              
+        }).catch((e)=>{console.log("Unable to send mail")})}catch (err) {
+            console.error(err);}
+
+    }
+
+
   return (
             <div className='container my-5'>
             <form class="row g-3">
@@ -78,7 +152,7 @@ export default function BookingForm() {
                     <input type="text" class="form-control" id="inputZip"/>
                 </div>
                 <div class="col-12">
-                    <button id='submitformbtn' type="submit" class="btn">Submit</button>
+                    <button id='submitformbtn' type="submit" class="btn" onClick={sendMail}>Submit</button>
                 </div>
             </form>
         </div>
