@@ -15,7 +15,7 @@ export default function BookingForm() {
         console.log(plateNo)
         console.log(car)
         console.log(address)
-        let url = `http://localhost:8080/mail/send/${email}`
+        let url = `https://go-mechanic-backend-production.up.railway.app/mail/send/${email}`
 
         let data = { 
             subject: "Go Mechanic - Booking Recipt",
