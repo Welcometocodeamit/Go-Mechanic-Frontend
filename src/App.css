@@ -554,3 +554,11 @@ input {
     margin: 4px 0;
   }
 }
+
+
+#garageName{
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(66, 34, 136);;
+  font-weight: 500;
+}
