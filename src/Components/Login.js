@@ -13,6 +13,7 @@ export default function Login() {
             <input id='loginsubmit' type='submit'/>
             </form>
             <p>Don't have account? <Link style={{textDecoration:"none"}} to='/register'>Register here</Link></p>
+            <p><Link style={{textDecoration:"none"}} to='/adminLogin'>Admin login</Link></p>
         </div>
       
     </div>

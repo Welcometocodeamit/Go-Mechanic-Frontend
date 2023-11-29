@@ -562,3 +562,22 @@ input {
   color: rgb(66, 34, 136);;
   font-weight: 500;
 }
+
+/* AdminGarageComponent */
+#adming{
+  border: 1px solid rgb(66, 34, 136);
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px;
+  padding: 0px 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contentofadmin{
+  margin: 5px;
+  padding: auto;
+  gap: 20px;
+}

@@ -9,6 +9,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Vehicles from './Components/Vehicles';
 import AboutUs from './Components/AboutUs';
 import AboutMe from './Components/AboutMe';
+import AdminLogin from './Components/AdminLogin';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/bookingform' element={<BookingForm/>}/>
         <Route path='/vehicles' element={<Vehicles/>}/>
         <Route path='/aboutus' element={<AboutUs/>}/>
+        <Route path='/adminLogin' element={<AdminLogin/>}/>
       </Routes>
       <AboutMe/>
    </BrowserRouter>
