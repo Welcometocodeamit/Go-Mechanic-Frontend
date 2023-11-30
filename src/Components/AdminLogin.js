@@ -24,7 +24,7 @@ export default function AdminLogin() {
         event.preventDefault();
         adminVerification()
         try {
-            let url = "https://go-mechanic-backend-production.up.railway.app/api/services";
+            let url = "https://gomechanicbackend.onrender.com/api/services";
             let data = await fetch(url).catch((err) => { console.log(err) });
             let parsedData = await data.json();
             console.log("init")

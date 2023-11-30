@@ -19,7 +19,7 @@ export default function AddVehicle() {
             body: JSON.stringify(data)
         };
 
-        let url = "https://go-mechanic-backend-production.up.railway.app/api/cars"
+        let url = "https://gomechanicbackend.onrender.com/api/cars"
 
         try{fetch(url, requestOptions).then(response=>{
             if (!response.ok) {

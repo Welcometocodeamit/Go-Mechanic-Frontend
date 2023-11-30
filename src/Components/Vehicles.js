@@ -12,7 +12,7 @@ export default class Vehicles extends Component{
 
 async componentDidMount(){
   try{
-  let url = "https://go-mechanic-backend-production.up.railway.app/api/cars"
+  let url = "https://gomechanicbackend.onrender.com/api/cars"
   let data = await fetch(url).catch((err)=>{console.log(err)})
   let parsedData= await data.json()
   this.setState({data:parsedData.data})

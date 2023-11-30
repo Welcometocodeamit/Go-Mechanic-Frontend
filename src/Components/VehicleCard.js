@@ -9,7 +9,7 @@ export default function VehicleCard(props) {
   function deleteVehicle(){
     let carId= props.carId
 
-      let url = `https://go-mechanic-backend-production.up.railway.app/api/cars/deletecar/${carId}`
+      let url = `https://gomechanicbackend.onrender.com/api/cars/deletecar/${carId}`
 
       fetch(url, {
         method: 'DELETE',

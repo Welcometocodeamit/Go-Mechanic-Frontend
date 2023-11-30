@@ -17,7 +17,7 @@ export default class Services extends Component {
 
         async componentDidMount(){
             try{
-            let url = "https://go-mechanic-backend-production.up.railway.app/api/services"
+            let url = "https://gomechanicbackend.onrender.com/api/services"
             this.setState({loading:true})
             let data = await fetch(url).catch((err)=>{console.log(err)})
             let parsedData= await data.json()
@@ -31,7 +31,7 @@ export default class Services extends Component {
         searchByCity=async ()=>{
             try{
             let city = document.getElementById('inputCity').value
-            let url = `https://go-mechanic-backend-production.up.railway.app/api/services/${city}`
+            let url = `https://gomechanicbackend.onrender.com/api/services/${city}`
             this.setState({loading:true})
             let data = await fetch(url).catch((err)=>{console.log(err)})
             let parsedData= await data.json()
