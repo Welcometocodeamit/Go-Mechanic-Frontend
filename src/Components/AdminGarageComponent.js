@@ -1,13 +1,16 @@
 import React from 'react'
 
-export default function (props) {
+export default function ({orgname, city, services, price }) {
   return (
-    <div id='adming'>
-      <div className='contentofadmin'><h5>{props.orgname}</h5></div>
-      <div className='contentofadmin'><p>City: {props.city}</p></div>
-      <div className='contentofadmin'><p>Services: {props.services}</p></div>
-      <div className='contentofadmin'><p>Cost: {props.price}</p></div>
-      <div className='contentofadmin'><button>Delete</button>&nbsp;&nbsp;<button>Update</button></div>
-    </div>
+    <>
+    <tr>
+      <td>{orgname}</td>
+      <td>{city}</td>
+      <td>{services}</td>
+      <td>{price}</td>
+      <td><button>Update</button></td>
+      <td><button>Delete</button></td>
+    </tr>
+    </>
   )
 }

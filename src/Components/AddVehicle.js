@@ -1,7 +1,8 @@
 import React from 'react'
 
 export default function AddVehicle() {
-    function addVehicleInfo(){
+    async function addVehicleInfo(event){
+        event.preventDefault();
         let vehicleName = document.getElementById('vehiclename').value
         let plateNo = document.getElementById('plateno').value
         let chassis = document.getElementById('chassis').value
@@ -21,10 +22,11 @@ export default function AddVehicle() {
 
         let url = "https://gomechanicbackend.onrender.com/api/cars"
 
-        try{fetch(url, requestOptions).then(response=>{
+        try{await fetch(url, requestOptions).then(response=>{
             if (!response.ok) {
                 throw new Error(`Failed to add vehicle. Status: ${response.status}`);
-              }
+                console.log("Not ok")
+              }else(console.log("ok"))
               window.location.reload()
         }).catch((e)=>{console.log("Unable to fetch")})}catch (err) {
             console.error(err);}

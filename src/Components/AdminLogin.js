@@ -7,7 +7,7 @@ export default function AdminLogin() {
     const [isAdmin, setIsAdmin] = useState(false);
 
     function adminVerification(){
-        const username="Amitkumbhar"
+        const username="Amit"
         const password="Amit@123"
          
         let inputEmail=document.getElementById('email').value
@@ -52,13 +52,35 @@ export default function AdminLogin() {
                 </div>
             }
 
-            {isAdmin &&
-                garages.map((element) => {
-                    return <AdminGarageComponent key={element.id} orgname={element.organizationName} city={element.city}
-                        services={element.serviceName} price={element.serviceCost}/>
-                })
-                
-            }
+            {isAdmin && (<>
+            <center><h4 id='adminheading'>Admin panal</h4></center>
+            <center><span><button id='addgaragebtn'>Add garage</button></span></center>
+            <table border={"1px solid black"}>
+                <thead>
+                <tr>
+                    <th>Garage Name</th>
+                    <th>City</th>
+                    <th>Garage Service</th>
+                    <th>Cost</th>
+                    <th>Update Garage</th>
+                    <th>Delete Garage</th>
+                </tr>
+                </thead>
+                <tbody>
+                {garages.map((element) => (
+                    <AdminGarageComponent
+                    key={element.id}
+                    orgname={element.organizationName}
+                    city={element.city}
+                    services={element.serviceName}
+                    price={element.serviceCost}
+                    />
+                ))}
+                </tbody>
+            </table>
+            </>
+            )}
+
         </>
     );
 }

@@ -581,3 +581,37 @@ input {
   padding: auto;
   gap: 20px;
 }
+
+table{
+  margin: 20px auto;
+  text-align: center;
+}
+
+th, tr, td{
+  padding: 10px;
+  border: 1px dotted black;
+
+}
+
+thead{
+  background-color: rgb(176, 193, 207);
+}
+
+tbody{
+  background-color: rgb(202, 219, 230);
+}
+
+#adminheading{
+  color: rgb(66, 34, 136);
+  margin: 20px;
+
+}
+
+#addgaragebtn{
+  width: 30vw;
+  text-align: center;
+}
+
+.vehiclecardbtns{
+  margin: 0px 5px;
+}

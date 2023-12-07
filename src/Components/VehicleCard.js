@@ -3,6 +3,7 @@ import audi from '../Assets/audi.png'
 import carmodel from '../Assets/Carmodel.png'
 import plate from '../Assets/license-plate.png'
 import lastservice from '../Assets/last-minute.png'
+import { Link } from 'react-router-dom'
 
 export default function VehicleCard(props) {
 
@@ -51,7 +52,8 @@ export default function VehicleCard(props) {
             </div>
 
             <div>
-              <button onClick={deleteVehicle}>Delete</button>
+              <button className='vehiclecardbtns' onClick={deleteVehicle}>Delete</button>
+              <Link to={`/updatevehicle?id=${props.carId}&name=${props.carName}&plate=${props.carPlate}&chassis=${props.carChassis}`}><button className='vehiclecardbtns'>Update</button></Link>
             </div>
 
           </div>

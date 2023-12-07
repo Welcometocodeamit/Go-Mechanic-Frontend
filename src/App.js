@@ -10,6 +10,7 @@ import Vehicles from './Components/Vehicles';
 import AboutUs from './Components/AboutUs';
 import AboutMe from './Components/AboutMe';
 import AdminLogin from './Components/AdminLogin';
+import UpdateVehicleForm from './Components/UpdateVehicleForm';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/vehicles' element={<Vehicles/>}/>
         <Route path='/aboutus' element={<AboutUs/>}/>
         <Route path='/adminLogin' element={<AdminLogin/>}/>
+        <Route path='/updatevehicle' element={<UpdateVehicleForm/>}/>
       </Routes>
       <AboutMe/>
    </BrowserRouter>
