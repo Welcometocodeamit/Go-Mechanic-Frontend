@@ -34,6 +34,7 @@ export default function Addgarage() {
             if (!response.ok) {
                 throw new Error(`Failed to add garage. Status: ${response.status}`);
             } else {
+                alert("Garage Added")
                 window.location.href = '/services';
             }
         }).catch((e) => {
