@@ -9,8 +9,11 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Vehicles from './Components/Vehicles';
 import AboutUs from './Components/AboutUs';
 import AboutMe from './Components/AboutMe';
+import Addgarage from './Components/Addgarage'
 import AdminLogin from './Components/AdminLogin';
 import UpdateVehicleForm from './Components/UpdateVehicleForm';
+import UpdateGarage from './Components/UpdateGarage';
+
 
 function App() {
   return (
@@ -22,12 +25,13 @@ function App() {
         <Route path='/services' element={<Services/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Registration/>}/>
-        <Route path='/addgarage' element={<Registration/>}/>
+        <Route path='/addgarage' element={<Addgarage/>}/>
         <Route path='/bookingform' element={<BookingForm/>}/>
         <Route path='/vehicles' element={<Vehicles/>}/>
         <Route path='/aboutus' element={<AboutUs/>}/>
         <Route path='/adminLogin' element={<AdminLogin/>}/>
         <Route path='/updatevehicle' element={<UpdateVehicleForm/>}/>
+        <Route path='/updategarage' element={<UpdateGarage/>}/>
       </Routes>
       {/* <AboutMe/> */}
    </BrowserRouter>

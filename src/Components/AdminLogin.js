@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import AdminGarageComponent from './AdminGarageComponent';
+import { Link } from 'react-router-dom';
 
 export default function AdminLogin() {
     const [garages, setGarages] = useState([]);
@@ -54,7 +55,7 @@ export default function AdminLogin() {
 
             {isAdmin && (<>
             <center><h4 id='adminheading'>Admin panal</h4></center>
-            <center><span><button id='addgaragebtn'>Add garage</button></span></center>
+            <center><span><Link to="/addgarage"><button id='addgaragebtn'>Add garage</button></Link></span></center>
             <table border={"1px solid black"}>
                 <thead>
                 <tr>
@@ -74,6 +75,7 @@ export default function AdminLogin() {
                     city={element.city}
                     services={element.serviceName}
                     price={element.serviceCost}
+                    id={element.id}
                     />
                 ))}
                 </tbody>

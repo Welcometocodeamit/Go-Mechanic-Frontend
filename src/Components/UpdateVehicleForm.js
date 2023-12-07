@@ -48,6 +48,7 @@ export default function UpdateVehicleForm() {
 
   return (
     <>
+        <center><h4 id='adminheading'>Update Vehicle</h4></center>
         <form className='container my-5' onSubmit={updateVehicle}>
             <div className="form-group">
                 <label htmlFor="exampleInputEmail1">Car Name</label>
