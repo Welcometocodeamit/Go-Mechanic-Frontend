@@ -29,7 +29,7 @@ function App() {
         <Route path='/adminLogin' element={<AdminLogin/>}/>
         <Route path='/updatevehicle' element={<UpdateVehicleForm/>}/>
       </Routes>
-      <AboutMe/>
+      {/* <AboutMe/> */}
    </BrowserRouter>
    </>
   );
