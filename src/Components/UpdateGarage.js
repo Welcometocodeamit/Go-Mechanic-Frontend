@@ -42,7 +42,7 @@ export default function UpdateGarage() {
           }else{
             alert("garage Update sucess")
           }
-          window.location.href = '/vehicles';
+          window.location.href = '/services';
           
     }).catch((e)=>{console.log("Unable to update vehicle")})}catch (err) {
         console.error(err);}
