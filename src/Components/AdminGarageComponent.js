@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function ({orgname, city, services, price, id }) {
   async function deleteGarage(){
   
-        let url = `https://gomechanicbackend.onrender.com/api/services/${id}`
+        let url = `${process.env.REACT_APP_BASE_URL}/services/${id}`
   
         await fetch(url, {
           method: 'DELETE',

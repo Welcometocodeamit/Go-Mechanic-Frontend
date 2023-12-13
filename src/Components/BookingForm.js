@@ -53,7 +53,7 @@ export default function BookingForm() {
             alert("Date and pickup time cannot be empty")
         }
         
-        let url = `https://gomechanicbackend.onrender.com/mail/send/${email}`
+        let url = `${process.env.REACT_APP_BASE_URL}/mail/send/${email}`
         let data = { 
             subject: "Go Mechanic - Booking Details",
             message: `Dear ${cname},

@@ -5,6 +5,8 @@ export default function Addgarage() {
   async function addGarage(event) {
     event.preventDefault(); // Fix typo in method name
 
+    
+
     var organizationName = document.getElementById('InputGarageName').value;
     var city = document.getElementById('InputGarageCity').value;
     var serviceName = document.getElementById('InputGarageService').value;
@@ -27,7 +29,7 @@ export default function Addgarage() {
         body: JSON.stringify(data)
     };
 
-    let url = "https://gomechanicbackend.onrender.com/api/services";
+    let url = `${process.env.REACT_APP_BASE_URL}/services`;
 
     try {
         await fetch(url, requestOptions).then(response => {

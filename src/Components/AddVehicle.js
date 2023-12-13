@@ -20,7 +20,7 @@ export default function AddVehicle() {
             body: JSON.stringify(data)
         };
 
-        let url = "https://gomechanicbackend.onrender.com/api/cars"
+        let url = `${process.env.REACT_APP_BASE_URL}/cars`
 
         try{await fetch(url, requestOptions).then(response=>{
             if (!response.ok) {

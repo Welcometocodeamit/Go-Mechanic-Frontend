@@ -19,7 +19,7 @@ export default function UpdateGarage() {
 
   async function upGarage(event) {
     event.preventDefault(); // Fix typo in method name
-    let url = `https://gomechanicbackend.onrender.com/api/services/updategarage/${garageId}`
+    let url = `${process.env.REACT_APP_BASE_URL}/services/updategarage/${garageId}`
 
     let data = {
         organizationName: garageName,

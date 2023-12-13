@@ -17,7 +17,7 @@ export default function UpdateVehicleForm() {
 
     async function updateVehicle(event){
         event.preventDefault();
-        let url = `https://gomechanicbackend.onrender.com/api/cars/updatecar/${carId}`
+        let url = `${process.env.REACT_APP_BASE_URL}/cars/updatecar/${carId}`
 
         let data = { 
             carName: carName,

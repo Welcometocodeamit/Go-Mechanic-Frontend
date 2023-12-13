@@ -25,7 +25,7 @@ export default function AdminLogin() {
         event.preventDefault();
         adminVerification()
         try {
-            let url = "https://gomechanicbackend.onrender.com/api/services";
+            let url = `${process.env.REACT_APP_BASE_URL}/services`;
             let data = await fetch(url).catch((err) => { console.log(err) });
             let parsedData = await data.json();
             console.log("init")

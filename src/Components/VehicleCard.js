@@ -10,7 +10,7 @@ export default function VehicleCard(props) {
   function deleteVehicle(){
     let carId= props.carId
 
-      let url = `https://gomechanicbackend.onrender.com/api/cars/deletecar/${carId}`
+      let url = `${process.env.REACT_APP_BASE_URL}/cars/deletecar/${carId}`
 
       fetch(url, {
         method: 'DELETE',
